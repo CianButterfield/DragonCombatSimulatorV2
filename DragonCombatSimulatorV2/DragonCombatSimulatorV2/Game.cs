@@ -20,6 +20,28 @@ namespace DragonCombatSimulatorV2
         }
 
         //methods and functions
+        private void Greet()
+        {
+            //greet the user, give instructions
+            Console.WriteLine(@"Welcome to Dragon Slayer.
+
+As the greatest hero in the land, you have been sent to slay the mighty dragon.
+
+You have three options per turn: Sword, Magic, and Heal.
+    Your sword deals the most damage but sometimes misses.
+    Your magic always hits but does less damage.
+    You may use heal to recover some health.
+
+(Press any key to continue)");
+
+            //wait for user to hit a key
+            Console.ReadKey();
+
+            //clear the screen for the begining of the game
+            Console.Clear();
+
+        }
+
         public void DisplayCombatInfo()
         {
             Console.WriteLine("Player HP: " + this.Player.HP + "\nDragon HP: " + this.Enemy.HP);
@@ -32,6 +54,9 @@ namespace DragonCombatSimulatorV2
 
         public void PlayGame()
         {
+            //greet the user
+            Greet();
+
             //play until the game is over
             while (this.Player.IsAlive&&this.Enemy.IsAlive)
             {
@@ -47,6 +72,7 @@ namespace DragonCombatSimulatorV2
             {
                 Console.WriteLine("You lost!");
             }
+            Console.ReadLine();
         }
 
 
