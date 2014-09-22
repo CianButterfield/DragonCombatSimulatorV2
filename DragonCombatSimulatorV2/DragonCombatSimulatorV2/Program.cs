@@ -8,8 +8,6 @@ namespace DragonCombatSimulatorV2
 {
     class Program
     {
-     
-
         static void Main(string[] args)
         {
             //change the console window title to "Dragon Slayer"
@@ -19,9 +17,5 @@ namespace DragonCombatSimulatorV2
             Game game = new Game();
             game.PlayGame();
         }
-
-        
-
-        
     }
 }
